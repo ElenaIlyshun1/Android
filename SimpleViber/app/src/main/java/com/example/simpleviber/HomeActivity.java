@@ -22,14 +22,16 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+
+
+public class HomeActivity extends AppCompatActivity {
 
     private static  int MAX_MESSAGE_LENGTH = 150;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("messages");
     Button mSendbutton;
     EditText mEditTextMessage;
-    EditText emailId, password;
+
 
 
     RecyclerView mMessagesRecycler;
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         mEditTextMessage = findViewById(R.id.msg_inp);
         mSendbutton = findViewById(R.id.msg_btn);
         mMessagesRecycler = findViewById(R.id.messages_recycler);
@@ -96,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-//
-
     }
 }
+
+
+
